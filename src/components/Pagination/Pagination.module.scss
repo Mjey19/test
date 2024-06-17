@@ -1,0 +1,68 @@
+.pagination {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  a {
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    color: var(--input-color);
+    font-size: 16px;
+    font-weight: 300;
+    transition: 0.2s;
+    position: relative;
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 24px;
+      background: transparent;
+      transition: 0.2s;
+    }
+    &:hover::after {
+      background: var(--input-color);
+    }
+  }
+  .next {
+    a {
+      &::after {
+        display: none;
+      }
+    }
+  }
+  .previous {
+    a {
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  .active {
+    background: var(--pagintaion-color);
+  }
+  .arrow {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.2s;
+    &:hover {
+      background: var(--pagintaion-color);
+    }
+  }
+  .arrowLeft {
+    transform: rotate(180deg);
+  }
+}

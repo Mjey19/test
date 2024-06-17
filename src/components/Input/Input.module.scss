@@ -1,0 +1,32 @@
+.inputLabel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-left: 16px;
+  padding-right: 18px;
+  width: 296px;
+  height: 36px;
+  background: var(--btn-color);
+  border-radius: 4px;
+  border: 1px solid transparent;
+  &:focus-within {
+    border: 1px solid var(--border-color);
+  }
+
+  input {
+    background: transparent;
+    width: 90%;
+    height: 100%;
+    border: none;
+    outline: none;
+    color: var(--input-color);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    &::placeholder {
+      color: var(--placeholder-color);
+    }
+  }
+  img {
+    cursor: pointer;
+  }
+}
